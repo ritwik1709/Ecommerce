@@ -5,10 +5,13 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server/server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix ./client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install": " npm i && cd client && npm i --production=false",
+    "build": "cd client && npm run build",
+    "render-build":"npm install && npm run build"
   },
   "keywords": [],
   "author": "Ritwik",
